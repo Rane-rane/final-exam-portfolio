@@ -3,7 +3,7 @@ function validateLogin() {
   var password = document.getElementById("password").value;
 
   if (username === "admin" && password === "1234") {
-    window.location.href = "index.html";
+    window.location.href = "index.html"; 
     return false;
   } else {
     alert("Invalid username or password!");
@@ -11,9 +11,7 @@ function validateLogin() {
   }
 }
 
-<script>
-  window.addEventListener("pageshow", () => {
-    document.body.classList.remove("fade-out");
-  });
-</script>
 
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
