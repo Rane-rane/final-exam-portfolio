@@ -2,7 +2,7 @@ function validateLogin() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
-  if (username === "Jordan" && password === "0510") {
+  if (username === "SirJabez" && password === "amaz1ng!") {
     window.location.href = "index.html";
     return false;
   } else {
