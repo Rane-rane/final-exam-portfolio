@@ -10,3 +10,10 @@ function validateLogin() {
     return false;
   }
 }
+
+<script>
+  window.addEventListener("pageshow", () => {
+    document.body.classList.remove("fade-out");
+  });
+</script>
+
