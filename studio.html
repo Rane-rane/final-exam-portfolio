@@ -5,6 +5,19 @@
   <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
+  <style>
+  body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+</style>
+
+
+  
 </head>
 <body class="background">
 
@@ -128,6 +141,24 @@
 </footer>
 
 
+
+    <script>
+  // Handle link clicks
+  document.querySelectorAll("a").forEach(link => {
+    if (link.getAttribute("target") !== "_blank") {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        const href = this.getAttribute("href");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // match CSS transition time
+      });
+    }
+  });
+</script>
+
+    
 
 </body>
 </html>
