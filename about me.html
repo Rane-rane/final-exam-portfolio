@@ -115,6 +115,23 @@ I'm an introvert person, yet a cosplayer, small fan-artist, Wattpad writer, edit
 </div>
 
 
+	 <script>
+  // Handle link clicks
+  document.querySelectorAll("a").forEach(link => {
+    if (link.getAttribute("target") !== "_blank") {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        const href = this.getAttribute("href");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // match CSS transition time
+      });
+    }
+  });
+</script>
+
+
 
 </body>
 </html>
