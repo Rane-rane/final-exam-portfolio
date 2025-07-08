@@ -92,6 +92,16 @@
   gap: 15px;
 }
 
+  body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+
+
   </style>
 </head>
 <body class="background">
@@ -220,6 +230,25 @@ legendary players who has been playing in the world of Valorant and celebrating 
     </section>
   </main>
 
+
+	<script>
+  // Handle link clicks
+  document.querySelectorAll("a").forEach(link => {
+    if (link.getAttribute("target") !== "_blank") {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        const href = this.getAttribute("href");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // match CSS transition time
+      });
+    }
+  });
+</script>
+
+
+	
 </body>
 </html>
 
