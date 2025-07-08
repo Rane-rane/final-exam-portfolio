@@ -2,7 +2,7 @@ function validateLogin() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
-  if (username === "admin" && password === "1234") {
+  if (username === "jordan" && password === "0510") {
     window.location.href = "index.html";
     return false;
   } else {
@@ -10,10 +10,6 @@ function validateLogin() {
     return false;
   }
 }
-
-<script>
-  window.addEventListener("pageshow", () => {
-    document.body.classList.remove("fade-out");
-  });
-</script>
-
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
